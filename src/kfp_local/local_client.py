@@ -1,21 +1,22 @@
 """Run pipeline local."""
-import datetime as dt  # noqa
 import inspect
-import os  # noqa
-import random  # noqa
+import os
 import re
 import types
 
 import fire
 
+
 class LocalClient:
+    """Local client."""
+    @staticmethod
     def create_run_from_pipeline_func(pipeline,
-                                          start_step=None,
-                                          func_steps_output: dict = None,
-                                          locals_: dict = None,
-                                          func_imports: list = None,
-                                          arguments: dict = None  # noqa
-                                          ):
+                                      start_step=None,
+                                      func_steps_output: dict = None,
+                                      locals_: dict = None,
+                                      func_imports: list = None,
+                                      arguments: dict = None  # noqa
+                                      ):
         """Run kfp pipeline in local (debugging)."""
         if not os.path.exists('tmp'):
             os.makedirs('tmp')
