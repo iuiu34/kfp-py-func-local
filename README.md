@@ -64,4 +64,4 @@ To debug those,
 2) create (and mantain) 2 pipelines, one for local and other for kubeflow is painful and error pruning
 
 Typical usage of `kfp-local` would be to debug your custom code locally with very few data samples.
-Check that code works fine, and then run it in kubernetes with all samples.# kubeflow-local
+Check that code works fine, and then run it in kubernetes with all samples.
