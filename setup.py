@@ -17,9 +17,9 @@ def get_requirements(filename):
 
 requirements = get_requirements(os.path.join(this_directory, 'requirements.txt'))
 
-setuptools.setup(name='kfp-local',
+setuptools.setup(name='kfp-py-func-local',
                  version='0.0.1',
-                 description='kfp-local',
+                 description='kfp-py-func-local',
                  long_description=long_description,
                  long_description_content_type='text/markdown',
                  classifiers=[
@@ -27,7 +27,7 @@ setuptools.setup(name='kfp-local',
                      "Programming Language :: Python :: 3 :: Only",
                      "Programming Language :: Python :: 3.6"
                  ],
-                 keywords='kubeflow,local',
+                 keywords='kubeflow,local,py-func',
                  url='http://https://github.com/iuiu34/kubeflow-local',
                  author='iuiu34',
                  author_email='',

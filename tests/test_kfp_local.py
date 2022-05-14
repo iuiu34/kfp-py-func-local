@@ -1,11 +1,13 @@
 import pytest
 
-from kfp_local import create_run_from_pipeline_func_locally
+from kfp_local import LocalClient
 
 
 def test_run_kfp_pipeline_local():
+    local_client = LocalClient()
+
     with pytest.raises(ValueError):
-        create_run_from_pipeline_func_locally('error')
+        local_client.create_run_from_pipeline_func('error')
 
 
 
@@ -21,5 +23,4 @@ def test_run_kfp_pipeline_local():
         return second_add_task
 
     arguments = {'a': 7, 'b': 8}
-
-    create_run_from_pipeline_func_locally(add_pipeline, arguments=arguments)
+    local_client.create_run_from_pipeline_func(add_pipeline, arguments=arguments)

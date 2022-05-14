@@ -15,7 +15,7 @@ Main purpose is to debug faster in early stages.
 Install:
 
 ```sh
-pip install kfp-local
+pip install kfp-py-func-local
 ```
 
 Assume you have
@@ -51,10 +51,11 @@ And compile it to a `yaml` to then run it in top of a kubernetes.
 
 With `kfp-local` you can avoid this, and run your code locally on your computer doing
 ```py
-from kfp_local import create_run_from_pipeline_func_locally
+from kfp_local import LocalClient
 arguments = dict(a=1,b=2)
 func_imports = ["from my_library import add_op"]
-create_run_from_pipeline_func_locally(add_pipeline, arguments=arguments, func_imports=func_imports)
+local_client = LocalClient()
+local_client.create_run_from_pipeline_func(add_pipeline, arguments=arguments, func_imports=func_imports)
 ```
 
 ## Why run locally a kubernetes orchestrator?
