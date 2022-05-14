@@ -28,7 +28,7 @@ setuptools.setup(name='kfp-py-func-local',
                      "Programming Language :: Python :: 3.6"
                  ],
                  keywords='kubeflow,local,py-func',
-                 url='http://https://github.com/iuiu34/kubeflow-local',
+                 url='http://github.com/iuiu34/kfp-py-func-local',
                  author='iuiu34',
                  author_email='',
                  license='COPYRIGHT',
