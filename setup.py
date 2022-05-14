@@ -18,7 +18,7 @@ def get_requirements(filename):
 requirements = get_requirements(os.path.join(this_directory, 'requirements.txt'))
 
 setuptools.setup(name='kfp-py-func-local',
-                 version='0.0.1',
+                 version='0.0.2',
                  description='kfp-py-func-local',
                  long_description=long_description,
                  long_description_content_type='text/markdown',
