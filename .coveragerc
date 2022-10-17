@@ -1,0 +1,6 @@
+[run]
+branch = True
+omit = ds-kfp-local/tests/*
+
+[report]
+fail_under=5
